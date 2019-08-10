@@ -1,0 +1,87 @@
+body {
+    background-color: #0cf;
+    color: #000;
+    width: 80%;
+    margin: auto;
+    line-height: 1.4;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* * {
+    border: 1px solid;
+    margin: 0;
+} */
+
+.home-link {
+    background-color: #fff;
+    padding: 3px 5px;
+    margin: 3px auto;
+    width: 3em;
+}
+
+.container {
+    /* margin: 0; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+}
+
+span {
+    display: inline;
+}
+
+div {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 4px 4px 4px #000;
+    border-radius: 10px;
+    overflow: auto;
+    margin: 20px 10px;
+    padding: 15px;
+}
+
+.article-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.article p a {
+    color: #fff;
+}
+
+a {
+    /* border: 1px solid #000; */
+    border-radius: 6px;
+    /* color: #fff; */
+    padding: 9px;
+    /* margin: 5px; */
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.edit {
+    background-color: mediumblue;
+    color: #fff;
+    width: 3em;
+}
+
+.delete {
+    background-color: red;
+    color: #fff;
+    width: 3em;
+}
+
+@media screen and (max-width: 450px) {
+    .article-info {
+    display: flex;
+    flex-direction: column;
+}
+}
