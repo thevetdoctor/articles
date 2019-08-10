@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zs4ju@5vfc33ameaid303)!pje(*+l)1^)hr*!i!%%!(t*#-!_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'hidden-fjord-28371.herokuapp.com']
 
@@ -91,7 +91,7 @@ DATABASES = {
     }
 }
 
-
+# print(DATABASES)
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
