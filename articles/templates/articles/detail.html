@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News Articles</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/articles/style.css' /%}" />
+</head>
+
+<body>
+    <div>
+        <div><a class="home-link" href="/articles/">Home</a></div><br>
+        <div>
+        {% block title %}Article ID: {{ article.id }}{% endblock %}
+            <div class="article">
+                {% block content %}
+                <b>{{ article.headline }}</b> <br> <br>
+                {{ article.content }} <br> <br>
+                <div class="article-info">
+                    <span> <b> By: </b> {{ article.reporter.full_name }} &nbsp; &nbsp; </span>
+                    <span> <b> Created: </b> {{ article.pub_date|date:"F j, Y" }} &nbsp; &nbsp; </span>
+                    <span> <b> Last Modified: </b> {{ article.last_edited |date:"F j, Y" }} &nbsp; &nbsp; </span>
+                </div>
+                    <p>
+                        <a class="edit" href="/articles/{{ article.id }}/edit/">Edit</a>
+                        <a class="delete" href="/articles/{{ article.id }}/delete/">Delete</a>
+                    </p>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

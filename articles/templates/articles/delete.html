@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News Articles</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/articles/style.css' /%}" />
+</head>
+
+<body>
+    <div><a href="/articles/">Home</a></div><br>
+    <div>
+        <h1>Article ID: {{ article.id }} has been deleted</h1>
+    </div>
+</body>
+
+</html>
